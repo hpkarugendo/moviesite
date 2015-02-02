@@ -1,0 +1,29 @@
+<div id="r_wrap">
+  <div class="all_content">
+    <% if @reviews.empty? %>
+        <h1> There Are No Reviews</h1>
+    <% else %>
+        <% @reviews.each do |review| %>
+            <table>
+              <tr>
+                <td><h2><%= review.title %></h2></td>
+                </tr>
+              <tr>
+                <td><%= review.body %></td>
+                </tr>
+              <tr>
+                <td><b>Posted By: </b><%= review.poster %></td>
+                </tr>
+              <tr>
+                <td><%= link_to 'Show', review %></td>
+                <td><%= link_to 'Edit', edit_review_path(review) %></td>
+                <td><%= link_to 'Destroy', review, confirm: 'Are you sure?', method: :delete %></td>
+              </tr>
+            </table>
+        <% end %>
+        <% end %>
+        </div>
+        </div>
+        <br />
+
+        <%= link_to 'New Review', new_review_path %>

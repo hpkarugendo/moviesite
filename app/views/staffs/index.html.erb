@@ -1,0 +1,28 @@
+<div id="s_wrap">
+  <div class="all_content">
+    <% @staffs.each do |staff| %>
+        <table>
+          <tr>
+            <td><h2><%= staff.role %></h2></td>
+          </tr>
+          <tr>
+            <td><%=image_tag(staff.photo) %></td>
+          </tr>
+          <tr>
+            <td><b>Name: </b><br \><%= staff.name %></td>
+          </tr>
+          <tr>
+            <td><b>Bio: </b><br \><%= staff.bio %></td>
+          </tr>
+          <tr>
+            <td><%= link_to 'Show', staff %></td>
+            <td><%= link_to 'Edit', edit_staff_path(staff) %></td>
+            <td><%= link_to 'Destroy', staff, confirm: 'Are you sure?', method: :delete %></td>
+          </tr>
+        </table>
+    <% end %>
+  </div>
+</div>
+<br />
+
+<%= link_to 'New Staff', new_staff_path %>

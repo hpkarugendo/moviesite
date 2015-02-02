@@ -1,0 +1,27 @@
+<div id="pr_wrap">
+  <div class="all_content">
+<% @products.each do |product| %>
+    <table id="pr_table">
+  <tr id="product_p">
+    <td id="product_ph">
+      <%= image_tag(product.photo) %>
+    </td>
+    <td id="product_i">
+
+      <h2><%= product.name %></h2>
+        <p><b>Media: </b> <%= product.disc %></p>
+        <p><b>Price: €</b><%= product.price %></p>
+        <p><b>Product Information</b><%= product.product_info %></p>
+  </tr>
+      <tr>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    </table>
+<% end %>
+  </div>
+</div>
+<br />
+
+<%= link_to 'New Product', new_product_path %>

@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+@font-face {
+    font-family: myFirstFont;
+    src: url("AVENGEANCE HEROIC AVENGER BD.otf"), url("AVENGEANCE HEROIC AVENGER BD.ttf");
+}
+li {
+    display: inline;
+    font-family: myFirstFont;
+    font-size: 16pt;
+    color: #ffffff;
+    text-underline: none;
+    padding-right: 20px;
+}
+body {
+    background-color: #000000;
+    color: #ffffff;
+    scrollbar-base-color: black;
+}
+#wrap {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#footer {
+    width: 800px;
+    margin: 0 auto;
+}
+#welcome {
+    width: 1200px;
+    height: 750px;
+    background-image: url("avengers_welcome.jpg");
+}
+#bodyContent {
+    width: inherit;
+    height: 800px;
+    resize: none;
+}
+#c_wrap {
+    height: inherit;
+    background-image: url("avengers_bg3.jpg");
+}
+#s_wrap {
+    height: inherit;
+    background-image: url("avengers_bg4.jpg");
+}
+#p_wrap {
+    height: inherit;
+    background-image: url("avengers_bg2.jpg");
+}
+#nu_wrap {
+     height: inherit;
+     background-image: url("avengers_bg1.jpg");
+ }
+#r_wrap {
+    height: inherit;
+    background-image: url("avengers_bg6.jpg");
+}
+#pr_wrap {
+    height: inherit;
+    background-image: url("avengers_bg7.jpg");
+}
+#pr_table {
+    width: 750px;
+    height: 469px;
+    background-image: url("product_back.png");
+    background-repeat: no-repeat;
+    resize: none;
+    color: #000000;
+}
+#product_ph, #product_i {
+    vertical-align: top;
+}
+#t_wrap {
+    width: 1200px;
+    height: 750px;
+    background-image: url("avengers_welcome.jpg");
+    resize: none;
+}
+#t_enter {
+    padding-left: 450px;
+}
+.all_content {
+    width: 800px;
+    height: 800px;
+    padding: 20px;
+    float: left;
+    overflow: auto;
+    resize: none;
+}
+h2 {
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+#c_bio {
+    width: inherit;
+
+}

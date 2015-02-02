@@ -1,0 +1,26 @@
+<div id = "nu_wrap">
+  <div class="all_content">
+    <% @news_updates.each do |news_update| %>
+        <table>
+          <tr>
+            <td>
+            <h2><%= news_update.title %></h2>
+            <p><%= news_update.body %></p>
+              <% if news_update.photo %>
+                  <center><p><%= image_tag(news_update.photo) %></td></p></center>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <td><%= link_to 'Show', news_update %></td>
+            <td><%= link_to 'Edit', edit_news_update_path(news_update) %></td>
+            <td><%= link_to 'Destroy', news_update, confirm: 'Are you sure?', method: :delete %></td>
+          </tr>
+        </table>
+    <% end %>
+  </div>
+</div>
+
+<br />
+
+<%= link_to 'New News update', new_news_update_path %>

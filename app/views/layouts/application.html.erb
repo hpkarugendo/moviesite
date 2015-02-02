@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Moviesite</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrap">
+
+      <div id="banner">
+        <%=link_to image_tag("avengers_header1.jpg"), root_path %>
+      </div>
+      <div id="header">
+        <ul>
+          <li><%=link_to image_tag("link1.png"), root_path %></li>
+          <li><%=link_to image_tag("link2.png"), news_updates_path %></li>
+          <li><%=link_to image_tag("link3.png"), pages_story_path %></li>
+          <li><%=link_to image_tag("link4.png"), actors_path %></li>
+          <li><%=link_to image_tag("link5.png"), staffs_path %></li>
+          <li><%=link_to image_tag("link6.png"), reviews_path %></li>
+          <li><%=link_to image_tag("link7.png"), products_path %></li>
+        </ul>
+      </div>
+<div id="bodyContent">
+  <%= yield %>
+</div>
+
+  <div id="footer">
+    <ul>
+      <li><%=link_to image_tag("avengers_footer1.jpg"), 'http://disney.co.uk/' %></li>
+      <li><%=link_to image_tag("avengers_footer3.jpg"), 'http://marvel.com/' %></li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

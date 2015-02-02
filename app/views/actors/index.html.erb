@@ -1,0 +1,35 @@
+<div id="c_wrap">
+<div class="all_content">
+    <% @actors.each do |actor| %>
+      <table >
+    <tr>
+      <td>
+        <h2><%= actor.role %></h2>
+      </td>
+        </tr>
+      <tr>
+    <td>
+       <%= image_tag(actor.photo) %>
+      </td>
+        </tr>
+        <tr>
+      <td>
+        <b>Actor: </b><br \><%= actor.name %>
+      </td>
+          </tr>
+        <tr>
+      <td id="c_bio">
+        <b>Characrer Bio: </b><br \><%= actor.bio %>
+      </td>
+          </tr>
+        <tr>
+         <td><%= link_to 'Show', actor %></td>
+          <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
+          <td><%= link_to 'Destdoy', actor, confirm: 'Are you sure?', method: :delete %></td>
+          </tr>
+          </table>
+    <% end %>
+</div>
+  </div>
+
+<%= link_to 'New Actor', new_actor_path %>
