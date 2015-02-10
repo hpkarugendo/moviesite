@@ -15,6 +15,11 @@
     font-family: myFirstFont;
     src: url("AVENGEANCE HEROIC AVENGER BD.otf"), url("AVENGEANCE HEROIC AVENGER BD.ttf");
 }
+body {
+    background-color: #000000;
+    color: #ffffff;
+    scrollbar-base-color: black;
+}
 li {
     display: inline;
     font-family: myFirstFont;
@@ -22,11 +27,6 @@ li {
     color: #ffffff;
     text-underline: none;
     padding-right: 20px;
-}
-body {
-    background-color: #000000;
-    color: #ffffff;
-    scrollbar-base-color: black;
 }
 #wrap {
     width: 1200px;
