@@ -43,8 +43,9 @@ class CustomersController < ApplicationController
     @customer = Customer.new(params[:customer])
 
     respond_to do |format|
-      if @customer.save
-        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
+      if @customer.save 
+		Blogmailer.email_to(@customer).deliver
+		format.html { redirect_to @customer, notice: 'Thank you. Please check your email.' }
         format.json { render json: @customer, status: :created, location: @customer }
       else
         format.html { render action: "new" }

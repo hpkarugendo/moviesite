@@ -16,25 +16,35 @@
     src: url("AVENGEANCE HEROIC AVENGER BD.otf"), url("AVENGEANCE HEROIC AVENGER BD.ttf");
 }
 body {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: black;
+    color: white;
     scrollbar-base-color: black;
 }
 li {
     display: inline;
-    font-family: myFirstFont;
-    font-size: 16pt;
-    color: #ffffff;
+	color: #FFFFFF;
     text-underline: none;
-    padding-right: 20px;
+    padding-right: 60px;
 }
 #wrap {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+	background-color: black;
+	color: white;
+}
+#header {
+	background-color: black;
+    font-family: myFirstFont;
+    font-size: 20pt;
 }
 #footer {
     width: 800px;
+    margin: 0 auto;
+}
+#cr {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
     margin: 0 auto;
 }
 #welcome {
@@ -46,6 +56,9 @@ li {
     width: inherit;
     height: 800px;
     resize: none;
+}
+#sUf {
+	font-size: 1.4em;
 }
 #c_wrap {
     height: inherit;
@@ -71,6 +84,12 @@ li {
     height: inherit;
     background-image: url("avengers_bg7.jpg");
 }
+#sI_wrap {
+    height: inherit;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
 #pr_table {
     width: 750px;
     height: 469px;
@@ -104,5 +123,18 @@ h2 {
 }
 #c_bio {
     width: inherit;
-
+}
+a:link{
+    color: 	#B2B2B2;
+    text-decoration: none;
+    cursor:pointer;
+}
+a:hover{
+    color: 	#E6E6E6;
+}
+a:active{
+    color: 	#FFFFFF;
+}
+.actions {
+    padding-top: 14px;
 }

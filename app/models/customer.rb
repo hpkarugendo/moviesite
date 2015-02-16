@@ -1,10 +1,9 @@
 class Customer < ActiveRecord::Base
 	has_many :reviews
 	has_secure_password
-	validates :name, uniqueness: true
-	validates :name, presence: true
-	validates :email, presence: true
-	validates :email, uniqueness: true
+	validates_uniqueness_of :name
+	validates_uniqueness_of :email
+	validates_presence_of :name
 	validate :invalid_email
 	def invalid_email
 		unless email.include?("@")
