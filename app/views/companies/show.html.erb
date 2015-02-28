@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<div id=""map_wrap">
+<center>
+  <h1><%=@company.name %> on the map</h1>
+    <div id="maps">
+        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=900x800&sensor=false&zoom=16&markers=#{@company.latitude}%2C#{@company.longitude}" %>
+    </div>
+  <h2>Address</h2>
+  <h3><%= @company.address %></h3>
+</center>
+</div>
+

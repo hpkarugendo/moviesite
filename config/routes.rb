@@ -1,4 +1,6 @@
 Moviesite::Application.routes.draw do
+  resources :companies
+
   get "sessions/new"
 
   get "sessions/create"
@@ -10,8 +12,6 @@ Moviesite::Application.routes.draw do
   get "pages/top"
 
   resources :products
-
-  resources :reviews
 
   resources :actors
 

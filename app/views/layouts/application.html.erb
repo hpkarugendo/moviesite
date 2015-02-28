@@ -19,7 +19,6 @@
           <li><%=link_to "Story", pages_story_path %></li>
           <li><%=link_to "Character", actors_path %></li>
           <li><%=link_to "Staff", staffs_path %></li>
-          <li><%=link_to "BBS", reviews_path %></li>
           <li><%=link_to "Shop", products_path %></li>
 		  <% if !signed_in? %>
 			<li><%=link_to "Sign In", signin_path %></li>
@@ -35,8 +34,8 @@
 </div>
   <div id="footer">
     <ul>
-      <li><%=link_to image_tag("avengers_footer1.jpg"), 'http://disney.co.uk/' %></li>
-      <li><%=link_to image_tag("avengers_footer3.jpg"), 'http://marvel.com/' %></li>
+      <li><%=link_to image_tag("avengers_footer1.jpg"), company_path(Company.find(2)) %></li>
+      <li><%=link_to image_tag("avengers_footer3.jpg"), company_path(Company.find(1)) %></li>
     </ul>
   </div>
   <div id="cr">
