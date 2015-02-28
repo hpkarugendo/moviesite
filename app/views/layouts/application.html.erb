@@ -14,28 +14,35 @@
       </div>
       <div id="header">
         <ul>
-          <li><%=link_to image_tag("link1.png"), root_path %></li>
-          <li><%=link_to image_tag("link2.png"), news_updates_path %></li>
-          <li><%=link_to image_tag("link3.png"), pages_story_path %></li>
-          <li><%=link_to image_tag("link4.png"), actors_path %></li>
-          <li><%=link_to image_tag("link5.png"), staffs_path %></li>
-          <li><%=link_to image_tag("link6.png"), reviews_path %></li>
-          <li><%=link_to image_tag("link7.png"), products_path %></li>
+          <li><%=link_to "Top", root_path %></li>
+          <li><%=link_to "News", news_updates_path %></li>
+          <li><%=link_to "Story", pages_story_path %></li>
+          <li><%=link_to "Character", actors_path %></li>
+          <li><%=link_to "Staff", staffs_path %></li>
+          <li><%=link_to "BBS", reviews_path %></li>
+          <li><%=link_to "Shop", products_path %></li>
+		  <% if !signed_in? %>
+			<li><%=link_to "Sign In", signin_path %></li>
+			<li><%=link_to "Sign Up", new_customer_path %></li>
+		  <% else %>
+			<li><%=link_to @current_customer.name, @current_customer %></li>
+			<li><%=link_to "Sign Out", signout_path %></li>
+		  <% end %>
         </ul>
       </div>
 <div id="bodyContent">
   <%= yield %>
 </div>
-
-<div id="aboutme">
-	<ul>
-		<li>Name: Henry Patrick Karugendo </li>
-		<li>GitHub: <%= link_to "Moviesite", 'https://github.com/hpkarugendo/moviesite' %></li>
-</div>
   <div id="footer">
     <ul>
       <li><%=link_to image_tag("avengers_footer1.jpg"), 'http://disney.co.uk/' %></li>
       <li><%=link_to image_tag("avengers_footer3.jpg"), 'http://marvel.com/' %></li>
+    </ul>
+  </div>
+  <div id="cr">
+    <ul>
+      <li>Henry Patrick Karugendo </li>
+      <li>GitHub: <%= link_to "Moviesite", 'https://github.com/hpkarugendo/moviesite' %></li>
     </ul>
   </div>
 

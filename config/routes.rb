@@ -1,4 +1,10 @@
 Moviesite::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   get "pages/story"
 
   get "pages/top"
@@ -12,6 +18,10 @@ Moviesite::Application.routes.draw do
   resources :staffs
 
   resources :customers
+  
+  resources :sessions
+	match '/signin', :to => 'sessions#new'
+	match '/signout', :to => 'sessions#destroy'
 
   resources :admins
 
