@@ -1,34 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <div id="cu-wrap">
-	<div>
-		<table>
-			<tr>
-				<td>
-					<p>
-						<%= image_tag(@customer.photo, :alt => "photo") %>
-					</p>
+	<div id="profile">
+      <p>
+        <%= image_tag(@customer.photo, :alt => "photo") %>
+      </p>
 
-					<p>
-						<b>Name:</b>
-						<%= @customer.name %>
-					</p>
+      <h3>Name</h3>
+      <p>
+        <%= @customer.name %>
+      </p>
 
-					<p>
-						<b>Email:</b>
-						<%= @customer.email %>
-					</p>
+      <h3>Email</h3>
+      <p>
+         <%= @customer.email %>
+      </p>
 
-                  <p>
-                    <b>Your orders:</b>
-                    <br /> No orders!
-                  </p>
+      <h3>Your Orders</h3>
+      <p>
+         No orders!
+      </p>
 
-					<p>
-						<%= link_to 'Update your Profile', edit_customer_path(@customer) %>
-					</p>
-				</td>
-			</tr>
-		</table>
+      <p>
+        <%= link_to 'Update your Profile', edit_customer_path(@customer) %>
+      </p>
 	</div>
 </div>

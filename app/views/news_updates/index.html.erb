@@ -11,16 +11,9 @@
               <% end %>
             </td>
           </tr>
-          <tr>
-            <td><%= link_to 'Show', news_update %></td>
-            <td><%= link_to 'Edit', edit_news_update_path(news_update) %></td>
-            <td><%= link_to 'Destroy', news_update, confirm: 'Are you sure?', method: :delete %></td>
-          </tr>
         </table>
     <% end %>
   </div>
 </div>
 
 <br />
-
-<%= link_to 'New News update', new_news_update_path %>
