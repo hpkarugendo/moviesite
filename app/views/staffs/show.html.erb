@@ -1,21 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= image_tag(@staff.photo) %>
-</p>
+<div id="staff_wrap">
+  <div class="all_content">
+    <p>
+      <%= image_tag(@staff.photo) %>
+    </p>
 
-<p>
-  <b>Name:</b><br \>
-  <%= @staff.name %>
-</p>
+    <p>
+        <h3>Name:</h3>
+        <%= @staff.name %>
+    </p>
 
-<p>
-  <b>Role:</b><br \>
-  <%= @staff.role %>
-</p>
+    <p>
+        <h3>Role:</h3>
+        <%= @staff.role %>
+    </p>
 
-<p>
-  <b>Bio:</b><br \>
-  <%= @staff.bio %>
-</p>
+    <p>
+        <h3>Bio:</h3>
+        <%= @staff.bio %>
+    </p>
+  </div>
+</div>
 

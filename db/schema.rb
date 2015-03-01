@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150228182911) do
+ActiveRecord::Schema.define(:version => 20150301141241) do
 
   create_table "actors", :force => true do |t|
     t.string   "photo"
@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(:version => 20150228182911) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "carts", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "companies", :force => true do |t|
@@ -45,6 +50,17 @@ ActiveRecord::Schema.define(:version => 20150228182911) do
     t.datetime "updated_at",      :null => false
     t.string   "photo"
     t.string   "email"
+    t.string   "address"
+    t.date     "dob"
+  end
+
+  create_table "lineitems", :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "order_id"
+    t.integer  "quantity"
+    t.integer  "cart_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "news_updates", :force => true do |t|
@@ -55,6 +71,14 @@ ActiveRecord::Schema.define(:version => 20150228182911) do
     t.datetime "updated_at",                :null => false
   end
 
+  create_table "orders", :force => true do |t|
+    t.integer  "customer_id"
+    t.string   "paymethod"
+    t.decimal  "total"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "products", :force => true do |t|
     t.string   "photo"
     t.string   "name"
@@ -63,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20150228182911) do
     t.datetime "updated_at",                                 :null => false
     t.text     "product_info"
     t.string   "disc"
+    t.integer  "quantity"
   end
 
   create_table "reviews", :force => true do |t|

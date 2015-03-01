@@ -1,5 +1,6 @@
 <div id="pr_wrap">
   <div class="all_content">
+    <h1>Shop</h1>
 <% @products.each do |product| %>
     <table id="pr_table">
   <tr id="product_p">
@@ -10,8 +11,9 @@
 
       <h2><%= product.name %></h2>
         <p><b>Media: </b> <%= product.disc %></p>
-        <p><b>Price: €</b><%= product.price %></p>
+        <p><b>Price: </b><%= euro(product.price) %></p>
         <p><b>Product Information</b><%= product.product_info %></p>
+        <p><%= button_to 'Add to Cart', lineitems_path(product_id: product) %></p>
   </tr>
     </table>
 <% end %>

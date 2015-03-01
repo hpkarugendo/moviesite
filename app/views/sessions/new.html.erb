@@ -1,26 +1,22 @@
 <div id="sI_wrap">
 	<div class="all_content">
 	<%= form_tag sessions_path do %>
-		<table >
-		<tr>
-			<td>
-				<h1>Sign In</h1>
-			</td>
-        </tr>
+		<table class="forms">
+          <tr>
+            <td><h1>Sign In</h1></td>
+          </tr>
         <tr>
-			<table>
-				<tr>
-					<td><%= label_tag :name %></td>
-					<td><%= text_field_tag :name %></td>
-				</tr>
-				<tr>
-					<td><%= label_tag :password %></td>
-					<td><%= password_field_tag :password %></td>
-				</tr>
-				<tr>
-					<td class="actions"><%= submit_tag "Sign In" %></td>
-				</tr>
-			</table>
+          <tr>
+            <td><%= label_tag :name %></td>
+            <td><%= text_field_tag :name %></td>
+          </tr>
+          <tr>
+            <td><%= label_tag :password %></td>
+            <td><%= password_field_tag :password %></td>
+          </tr>
+          <tr>
+            <td class="actions"><%= submit_tag "Sign In" %></td>
+          </tr>
         </tr>
 		</table>
 	<% end %>

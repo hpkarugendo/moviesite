@@ -1,0 +1,42 @@
+<div id="shop_wrap">
+  <div class="all_content">
+    <h1>Shop</h1>
+    <% if !@products.empty? %>
+        <% @products.each do |product| %>
+            <table id="shop_table">
+              <tr style="align-items: baseline">
+                <td id="product_photo"><%= image_tag(product.photo) %></td>
+                <td id="product_info">
+                  <tr>
+                    <td class="product_heading">Title</td>
+                    <td class="product_values"><%= product.name %></td>
+                  </tr>
+                  <tr>
+                    <td class="product_heading">Description</td>
+                    <td class="product_values"><%= sanitize(product.product_info) %></td>
+                  </tr>
+                  <tr>
+                    <td class="product_heading">Format</td>
+                    <td class="product_values"><%= product.disc %></td>
+                  </tr>
+                  <tr>
+                    <td class="product_heading">Price</td>
+                    <td class="product_values"><%= euro(product.price) %></td>
+                  </tr>
+                  <tr>
+                    <td class="product_heading">Availability</td>
+                    <td class="product_values"><%= product.quantity %> in stock</td>
+                  </tr>
+                  <tr>
+                    <td><%= button_to 'Add to Cart', lineitem_path(product_id: product) %></td>
+                  </tr>
+                </td>
+              </tr>
+            </table>
+        <% end %>
+    <% else %>
+        <h3>There are no products for sale</h3>
+    <% end %>
+
+  </div>
+</div>

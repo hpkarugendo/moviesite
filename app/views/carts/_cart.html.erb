@@ -1,0 +1,14 @@
+<table id="cart_table">
+  <% @cart.lineitems.each do |item| %>
+      <tr>
+        <td id="cart_photo"><%= image_tag(item.product.photo, :size => '50x50') %>) </td>
+        <td id="cart_name"><%= item.product.name %></td>
+        <td id="cart_quantity"><%= item.quantity %> &times;</td>
+      </tr>
+      <tr>
+        <td><%= button_to 'Continue Shopping', products_path, :method => :get %> </td>
+        <td><%= button_to 'Empty Cart', @cart, method: :delete, confirm: 'Are you sure?' %></td>
+        <td><%= button_to 'Checkout', new_order_path, :method => :get %></td>
+      </tr>
+  <% end %>
+</table>

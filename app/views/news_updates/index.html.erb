@@ -1,13 +1,16 @@
 <div id = "nu_wrap">
   <div class="all_content">
+    <h1>News</h1>
     <% @news_updates.each do |news_update| %>
         <table>
           <tr>
             <td>
-            <h2><%= news_update.title %></h2>
-            <p><%= news_update.body %></p>
+              <h2><%= news_update.title %></h2>
+              <p><%= news_update.body %></p>
               <% if news_update.photo %>
-                  <center><p><%= image_tag(news_update.photo) %></td></p></center>
+                  <div style="text-align: center;">
+                    <p><%= image_tag(news_update.photo) %></p>
+                  </div>
               <% end %>
             </td>
           </tr>

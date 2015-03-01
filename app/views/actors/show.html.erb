@@ -1,24 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= image_tag(@actor.photo) %>
-</p>
+<div id ="actor_wrap">
+  <div class="all_content">
+    <p>
+      <%= image_tag(@actor.photo) %>
+    </p>
 
-<p>
-  <b>Name:</b>
-  <%= @actor.name %>
-</p>
+    <p>
+    <h3>Name:</h3>
+    <%= @actor.name %>
+    </p>
 
-<p>
-  <b>Character:</b>
-  <%= @actor.role %>
-</p>
+    <p>
+    <h3>Character:</h3>
+    <%= @actor.role %>
+    </p>
 
-<p>
-  <b>Character Bio:</b><br \>
-  <%= @actor.bio %>
-</p>
-
-
-<%= link_to 'Edit', edit_actor_path(@actor) %> |
-<%= link_to 'Back', actors_path %>
+    <p>
+    <h3>Character Bio:</h3>
+    <%= @actor.bio %>
+    </p>
+  </div>
+  <div>
+    <%= link_to 'Edit Actor Info', edit_actor_path(@actor) %> |
+    <%= link_to 'Back', actors_path %>
+  </div>
+</div>

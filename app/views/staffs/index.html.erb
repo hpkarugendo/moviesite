@@ -1,19 +1,24 @@
 <div id="s_wrap">
   <div class="all_content">
+    <h1>Staff</h1>
     <% @staffs.each do |staff| %>
         <table>
-          <tr>
-            <td><h2><%= staff.role %></h2></td>
+          <td>
+            <h2><%= staff.role %></h2>
+            <%=image_tag(staff.photo) %>
+          </td>
+          <td>
+          <table class="sub_table">
+            <tr>
+            <td><b>Name: </b></td>
+            <td><%= staff.name %></td>
           </tr>
           <tr>
-            <td><%=image_tag(staff.photo) %></td>
+            <td><b>Bio: </b></td>
+            <td><%= staff.bio %></td>
           </tr>
-          <tr>
-            <td><b>Name: </b><br \><%= staff.name %></td>
-          </tr>
-          <tr>
-            <td><b>Bio: </b><br \><%= staff.bio %></td>
-          </tr>
+            </table>
+            </td>
         </table>
     <% end %>
   </div>

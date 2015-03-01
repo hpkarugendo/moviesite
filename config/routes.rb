@@ -1,4 +1,14 @@
 Moviesite::Application.routes.draw do
+  resources :carts do
+    resources :lineitems
+  end
+
+  resources :orders
+
+  resources :lineitems
+
+  get "shop/index"
+
   resources :companies
 
   get "sessions/new"

@@ -1,28 +1,25 @@
 <div id="c_wrap">
-<div class="all_content">
+  <div class="all_content">
+    <h1>Character</h1>
     <% @actors.each do |actor| %>
-      <table >
-        <tr>
-            <td>
-                <h2><%= actor.role %></h2>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= image_tag(actor.photo) %>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                 <b>Actor: </b><br \><%= actor.name %>
-             </td>
-        </tr>
-        <tr>
-            <td id="c_bio">
-                <b>Characrer Bio: </b><br \><%= actor.bio %>
-            </td>
-        </tr>
-      </table>
+        <table >
+          <td>
+              <h2><%= actor.role %></h2>
+              <%= image_tag(actor.photo) %>
+          </td>
+          <td>
+            <table class="sub_table">
+                <tr>
+                    <td><b>Actor: </b></td>
+                    <td><%= actor.name %></td>
+                </tr>
+                <tr>
+                    <td><b>Character Bio: </b></td>
+                    <td id="c_bio"><%= actor.bio %></td>
+                </tr>
+            </table>
+          </td>
+        </table>
     <% end %>
-</div>
+  </div>
 </div>

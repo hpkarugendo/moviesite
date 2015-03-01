@@ -24,6 +24,10 @@
 		<%= f.label :email %><br />
 		<%= f.text_field :email %>
 	</div>
+    <div class="field">
+      <%= f.label :address %><br />
+      <%= f.text_area(:address, :size => '31x4' ) %>
+    </div>
 	<div class="field">
 		<%= f.label :password %><br />
 		<%= f.password_field :password %>

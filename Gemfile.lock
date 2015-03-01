@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ImageResize (0.0.5)
     actionmailer (3.2.1)
       actionpack (= 3.2.1)
       mail (~> 2.4.0)
@@ -112,6 +113,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  ImageResize
   bcrypt-ruby (= 3.0.1)
   carrierwave
   coffee-rails (~> 3.2.1)

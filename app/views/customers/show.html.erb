@@ -17,12 +17,21 @@
       </p>
 
       <h3>Your Orders</h3>
-      <p>
-         No orders!
-      </p>
+      <table id="customer_orders_table">
+        <% if !@customer.orders.nil? %>
+            <% @customer.orders.each do |o| %>
+                <tr>
+                  <td>Order no <%= o.id %></td>
+                  <td><%= euro(o.total) %></td>
+                </tr>
+            <% end %>
+        <% else %>
+            <tr>
+              <td>You have no orders</td>
+            </tr>
+        <% end %>
+        <table>
 
-      <p>
-        <%= link_to 'Update your Profile', edit_customer_path(@customer) %>
-      </p>
+      <p><%= link_to 'Update your Profile', edit_customer_path(@customer) %> </p>
 	</div>
 </div>
